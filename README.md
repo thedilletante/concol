@@ -1,0 +1,2 @@
+# concol
+configuration collection
