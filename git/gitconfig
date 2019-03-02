@@ -1,0 +1,11 @@
+[credential]
+	helper = store
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	ll = log --decorate --graph --oneline
+	mf = merge --ff-only
+	st = status
+[core]
+	editor = vim
