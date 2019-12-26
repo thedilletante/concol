@@ -1,0 +1,19 @@
+# .xsession
+
+xrdb -merge .Xresources
+
+# set up wallpaper image
+feh --bg-scale ${HOME}/background.jpg &
+
+# set up transparency
+compton &
+
+# start up screensaver service
+xscreensaver-command -exit
+xscreensaver -no-splash &
+
+# start up automount usb storages
+udiskie &
+
+# run xmonad
+xmonad

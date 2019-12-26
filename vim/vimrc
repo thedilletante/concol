@@ -1,115 +1,145 @@
-" -------------- Vundle configs
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Bundle 'Valloric/YouCompleteMe'
+"""""""" BASIC OPTIONS
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Set off compatibility with vi editor
+" TODO: what does it mean?
+set nocompatible
 
-" -------------- Vundle configs
-syntax on
-set background=dark
-set ruler                     " show the line number on the bar
-set more                      " use more prompt
-set autoread                  " watch for file changes
-set number                    " line numbers
-set hidden
-set noautowrite               " don't automagically write on :next
-set lazyredraw                " don't redraw when don't have to
-set showmode
-set showcmd
-set autoindent smartindent    " auto/smart indent
-set smarttab                  " tab and backspace are smart
-set tabstop=4                 " 6 spaces
-set shiftwidth=4
+" Enable syntax and plugins (for netrw)
+syntax enable
+filetype plugin on
+
+" turn hybrid line numbers on
+set number relativenumber
+set nu rnu
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" Set smart tab behaviour with default tab size = 2
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
-set scrolloff=5               " keep at least 5 lines above/below
-set sidescrolloff=5           " keep at least 5 lines left/right
-set history=200
-set backspace=indent,eol,start
-set linebreak
-set cmdheight=2               " command line two lines high
-set undolevels=1000           " 1000 undos
-set updatecount=100           " switch every 100 chars
-set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
-set ttyfast                   " we have a fast terminal
-set noerrorbells              " No error bells please
-set shell=bash
-set fileformats=unix
-set ff=unix
-set wildmode=longest:full
-set wildmenu                  " menu has tab completion
-let maplocalleader=','        " all my macros start with ,
-set laststatus=2
 
-"  searching
-set incsearch                 " incremental search
-set ignorecase                " search ignoring case
-set hlsearch                  " highlight the search
-set showmatch                 " show matching bracket
-set diffopt=filler,iwhite     " ignore all whitespace and sync
+set autoindent
 
-"  backup
-set backup
-set backupdir=~/.vim_backup
-set viminfo=%100,'100,/100,h,\"500,:100,n~/.viminfo
-"set viminfo='100,f1
-
-" spelling
-if v:version >= 700
-  " Enable spell check for text files
-  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-endif
-
-" mappings
-" toggle list mode
-nmap <LocalLeader>tl :set list!<cr>
-" toggle paste mode
-nmap <LocalLeader>pp :set paste!<cr>
-imap "" ""<Left>
-imap '' ''<Left>
-imap {} {<CR>}<Up><CR>
-
-
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+" Read .vimrc file from current directory
+set exrc
 
 
 
-set cursorline 
-hi CursorLine     guifg=NONE        guibg=#121212        gui=NONE ctermfg=NONE    cterm=BOLD 
+" Show vertical stop
+" set cc=100
 
-" set cursorcolumn 
-" hi CursorColumn     guifg=NONE        guibg=#121212     gui=NONE ctermfg=NONE        ctermbg=darkgray    cterm=BOLD 
+"""""""" FINDING FILES
 
-hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE ctermfg=gray    ctermbg=NONE        cterm=NONE 
-source ~/.vim/syntax/cpp.vim
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+" define specific set path in project
+"set path+=**
 
-let g:ycm_confirm_extra_conf = 0
+" Display all matching files when we tab complete
+set wildmenu
+
+" With this options we can:
+" - hit tab to :find by partial match
+" - use * to make it fuzzy
+" - :b lets you autocomplete any open buffer
+
+
+
+
+"""""""" TAG JUMPING
+
+" Create the `tags` file (requires ctags to be installed)
+command! MakeTags !ctags -R --extras=+f .
+
+" After creation tags in project we can:
+" - use ^] to jump to tab under cursor
+" - use g^] for ambiguous tags
+" - use ^t to jump back up the tag stack
+
+" Consider also rusty-tags.vi file as a tags source for rust projects
+" autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+
+
+"""""""" AUTOCOMPLETE
+
+" HIGHLIGHTS:
+" - ^x^n for JUST this file
+" - ^x^f for filenames (works with our path trick!)
+" - ^x^] for tags only
+" - ^n for anything specified by the 'complete' option
+" - use ^n and ^p to go back and forth in the suggestion list
+" - read other good stuff in |ins-completion|
+
+
+
+""""""""" FILE BROWSING
+
+" Tweaks for browsing
+" disable banner
+let g:netrw_banner=0
+" open in prior window
+let g:netrw_browse_split=4
+" open splits to the right
+let g:netwr_altv=1
+" tree view
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" With this options we can:
+" - :edit a folder to open a file brower
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netw-browse-maps| for more mappings
+
+" rust.vim plugin sets the recommended style for rust files
+" with tabstop=8 shiftwidth=4 etc.
+" for a while I want to leave HMP like style
+" so setting variable below to 0 force rust.vim not to set the style
+" let g:rust_recommended_style = 0
+
+" autocomplete brackets
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+" autosave
+" just press \s in normal mode
+noremap <Leader>s :update<CR>
+
+
+" highlight current line
+set cursorline
+
+
+
+
+
+
+"""""""""""""" SEARCH
+
+" To search specific item you can:
+" - copy it using 'yank' command
+" - paste it into command line mode using ctrl_r + \" key
+
+" Highligh matched string
+set hlsearch
+
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+packloadall
+
+
+" Setup persistent updo
+set undofile
+set undodir=~/.vim/undodir

@@ -1,0 +1,11 @@
+diff --git a/ftplugin/cpp.vim b/ftplugin/cpp.vim
+index a0c11cc..d9f9d2d 100644
+--- a/ftplugin/cpp.vim
++++ b/ftplugin/cpp.vim
+@@ -144,5 +144,5 @@ endfunction
+ 
+ command! -nargs=+ Cppman call s:Cppman(expand(<q-args>)) 
+ setl keywordprg=:Cppman                                  
+-setl iskeyword+=:,=,~,[,],*,!,<,>                        
++" setl iskeyword+=:,=,~,[,],*,!,<,>
+ 
