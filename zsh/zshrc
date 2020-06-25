@@ -114,4 +114,8 @@ alias grep=rg
 
 export PATH=$PATH:$HOME/proj/work_notes/scripts
 export _JAVA_AWT_WM_NONREPARENTING=1
-export PATH="/usr/lib/ccache/bin/:$PATH"
+#export PATH="/usr/lib/ccache/:$PATH"
+#export CC="ccache gcc"
+#export HOSTCC="ccache gcc"
+#export HOSTCXX="ccache g++"
+export PATH=$PATH:/usr/local/go/bin
