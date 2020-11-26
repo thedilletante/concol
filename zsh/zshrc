@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #source $HOME/.cargo/env
 #source /home/dilletante/proj/work_notes/config/zshrc
+source $HOME/proj/work_notes/config/zshrc
 
 alias ls=exa
 alias grep=rg
