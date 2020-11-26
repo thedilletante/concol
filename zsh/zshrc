@@ -106,8 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/.cargo/env
-source /home/dilletante/proj/work_notes/config/zshrc
+#source $HOME/.cargo/env
+#source /home/dilletante/proj/work_notes/config/zshrc
 
 alias ls=exa
 alias grep=rg
@@ -119,3 +119,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #export HOSTCC="ccache gcc"
 #export HOSTCXX="ccache g++"
 export PATH=$PATH:/usr/local/go/bin
+
+if command -v tmux >/dev/null 2>&1 && [ "${DISPLAY}" ]; then
+    # if not inside a tmux session, and if no session is started, start a new session
+    [ -z "${TMUX}" ] && (tmux attach >/dev/null 2>&1 || tmux)
+fi

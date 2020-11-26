@@ -41,7 +41,7 @@ set exrc
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 " define specific set path in project
-"set path+=**
+set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
