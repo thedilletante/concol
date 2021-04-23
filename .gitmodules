@@ -16,3 +16,30 @@
 [submodule "vim/vim/pack/git-plugins/start/typescript-vim"]
 	path = vim/vim/pack/git-plugins/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/vim/pack/git-plugins/start/YouCompleteMe"]
+	path = vim/vim/pack/git-plugins/start/YouCompleteMe
+	url = git@github.com:ycm-core/YouCompleteMe.git
+[submodule "vim/vim/pack/git-plugins/start/nerdcommenter"]
+	path = vim/vim/pack/git-plugins/start/nerdcommenter
+	url = git@github.com:preservim/nerdcommenter.git
+[submodule "vim/vim/pack/git-plugins/start/vim-afterglow"]
+	path = vim/vim/pack/git-plugins/start/vim-afterglow
+	url = git@github.com:danilo-augusto/vim-afterglow.git
+[submodule "vim/vim/pack/git-plugins/start/vim-auto-save"]
+	path = vim/vim/pack/git-plugins/start/vim-auto-save
+	url = git@github.com:907th/vim-auto-save.git
+[submodule "vim/vim/pack/git-plugins/start/vim-conflicted"]
+	path = vim/vim/pack/git-plugins/start/vim-conflicted
+	url = https://github.com/christoomey/vim-conflicted.git
+[submodule "vim/vim/pack/git-plugins/start/vim-flake8"]
+	path = vim/vim/pack/git-plugins/start/vim-flake8
+	url = git@github.com:nvie/vim-flake8.git
+[submodule "vim/vim/pack/git-plugins/start/vim-javascript"]
+	path = vim/vim/pack/git-plugins/start/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim/vim/pack/git-plugins/start/vim-test"]
+	path = vim/vim/pack/git-plugins/start/vim-test
+	url = git@github.com:vim-test/vim-test.git
+[submodule "vim/vim/pack/git-plugins/start/vim-virtualenv"]
+	path = vim/vim/pack/git-plugins/start/vim-virtualenv
+	url = git@github.com:jmcantrell/vim-virtualenv.git

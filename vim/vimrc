@@ -99,6 +99,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - <CR>/v/t to open in an h-split/v-split/tab
 " - check |netw-browse-maps| for more mappings
 
+
 " rust.vim plugin sets the recommended style for rust files
 " with tabstop=8 shiftwidth=4 etc.
 " for a while I want to leave HMP like style
@@ -106,21 +107,23 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " let g:rust_recommended_style = 0
 
 " autocomplete brackets
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
 " autosave
 " just press \s in normal mode
-noremap <Leader>s :update<CR>
+noremap <Leader><space> :update<CR>
 
 
 " highlight current line
 set cursorline
 
 
+" make backspace work in any state
+set backspace=indent,eol,start
 
 
 
@@ -143,3 +146,47 @@ packloadall
 " Setup persistent updo
 set undofile
 set undodir=~/.vim/undodir
+
+let mapleader = '\'
+
+
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
+
+
+
+"""""" vim.test config
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+let test#strategy = "vimterminal"
+
+
+
+" Edit vimr configuration file
+nnoremap <Leader>ve :tabnew $MYVIMRC<CR>
+" " Reload vimr configuration file
+nnoremap <Leader>vr :source $MYVIMRC<CR>
+
+
+" FZF shortcuts
+nnoremap <silent> <leader>f :FZF<cr>
+nnoremap <silent> <leader>F :FZF ~<cr>
+
+nnoremap <silent> <leader>t :Tags<cr>
+nnoremap <silent> <leader>T :Tags <word><cr>
+
+nnoremap <silent> <leader>w :Rg<cr>
+nnoremap <silent> <leader>W :Rg <C-r><C-w><cr>
+
+" completion
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+
+
+
+
+
+colorscheme afterglow
