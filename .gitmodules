@@ -43,3 +43,12 @@
 [submodule "vim/vim/pack/git-plugins/start/vim-virtualenv"]
 	path = vim/vim/pack/git-plugins/start/vim-virtualenv
 	url = git@github.com:jmcantrell/vim-virtualenv.git
+[submodule "vim/vim/pack/git-plugins/start/open-browser.vim"]
+	path = vim/vim/pack/git-plugins/start/open-browser.vim
+	url = git@github.com:tyru/open-browser.vim.git
+[submodule "vim/vim/pack/git-plugins/start/plantuml-syntax"]
+	path = vim/vim/pack/git-plugins/start/plantuml-syntax
+	url = git@github.com:aklt/plantuml-syntax.git
+[submodule "vim/vim/pack/git-plugins/start/plantuml-previewer.vim"]
+	path = vim/vim/pack/git-plugins/start/plantuml-previewer.vim
+	url = git@github.com:weirongxu/plantuml-previewer.vim.git
