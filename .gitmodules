@@ -64,3 +64,9 @@
 [submodule "vim/vim/pack/git-plugins/start/vim-better-whitespace"]
 	path = vim/vim/pack/git-plugins/start/vim-better-whitespace
 	url = git@github.com:ntpeters/vim-better-whitespace.git
+[submodule "vim/vim/pack/git-plugins/start/vim-toml"]
+	path = vim/vim/pack/git-plugins/start/vim-toml
+	url = git@github.com:cespare/vim-toml.git
+[submodule "vim/vim/pack/git-plugins/start/himalaya"]
+	path = vim/vim/pack/git-plugins/start/himalaya
+	url = git@github.com:soywod/himalaya.git
