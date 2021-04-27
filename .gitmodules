@@ -1,72 +1,104 @@
 [submodule "vim/vim/pack/git-plugins/start/fzf.vim"]
 	path = vim/vim/pack/git-plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/rust.vim"]
 	path = vim/vim/pack/git-plugins/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-cmake"]
 	path = vim/vim/pack/git-plugins/start/vim-cmake
 	url = https://github.com/vhdirk/vim-cmake.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-cppman"]
 	path = vim/vim/pack/git-plugins/start/vim-cppman
 	url = https://github.com/gauteh/vim-cppman.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-fugitive"]
 	path = vim/vim/pack/git-plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/typescript-vim"]
 	path = vim/vim/pack/git-plugins/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/YouCompleteMe"]
 	path = vim/vim/pack/git-plugins/start/YouCompleteMe
 	url = git@github.com:ycm-core/YouCompleteMe.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/nerdcommenter"]
 	path = vim/vim/pack/git-plugins/start/nerdcommenter
 	url = git@github.com:preservim/nerdcommenter.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-afterglow"]
 	path = vim/vim/pack/git-plugins/start/vim-afterglow
 	url = git@github.com:danilo-augusto/vim-afterglow.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-auto-save"]
 	path = vim/vim/pack/git-plugins/start/vim-auto-save
 	url = git@github.com:907th/vim-auto-save.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-conflicted"]
 	path = vim/vim/pack/git-plugins/start/vim-conflicted
 	url = https://github.com/christoomey/vim-conflicted.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-flake8"]
 	path = vim/vim/pack/git-plugins/start/vim-flake8
 	url = git@github.com:nvie/vim-flake8.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-javascript"]
 	path = vim/vim/pack/git-plugins/start/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-test"]
 	path = vim/vim/pack/git-plugins/start/vim-test
 	url = git@github.com:vim-test/vim-test.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-virtualenv"]
 	path = vim/vim/pack/git-plugins/start/vim-virtualenv
 	url = git@github.com:jmcantrell/vim-virtualenv.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/open-browser.vim"]
 	path = vim/vim/pack/git-plugins/start/open-browser.vim
 	url = git@github.com:tyru/open-browser.vim.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/plantuml-syntax"]
 	path = vim/vim/pack/git-plugins/start/plantuml-syntax
 	url = git@github.com:aklt/plantuml-syntax.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/plantuml-previewer.vim"]
 	path = vim/vim/pack/git-plugins/start/plantuml-previewer.vim
 	url = git@github.com:weirongxu/plantuml-previewer.vim.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/ale"]
 	path = vim/vim/pack/git-plugins/start/ale
 	url = git@github.com:dense-analysis/ale.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/indentLine"]
 	path = vim/vim/pack/git-plugins/start/indentLine
 	url = git@github.com:Yggdroot/indentLine.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-anyfold"]
 	path = vim/vim/pack/git-plugins/start/vim-anyfold
 	url = git@github.com:pseewald/vim-anyfold.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-better-whitespace"]
 	path = vim/vim/pack/git-plugins/start/vim-better-whitespace
 	url = git@github.com:ntpeters/vim-better-whitespace.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/vim-toml"]
 	path = vim/vim/pack/git-plugins/start/vim-toml
 	url = git@github.com:cespare/vim-toml.git
+  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/himalaya"]
 	path = vim/vim/pack/git-plugins/start/himalaya
 	url = git@github.com:soywod/himalaya.git
+  ignore = dirty
+[submodule "vim/vim/pack/git-plugins/start/nerdtree-git"]
+	path = vim/vim/pack/git-plugins/start/nerdtree-git
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+  ignore = dirty
+[submodule "vim/vim/pack/git-plugins/start/nerdtree"]
+	path = vim/vim/pack/git-plugins/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+  ignore = dirty

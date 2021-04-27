@@ -136,3 +136,4 @@ export PATH=${PATH}:/Users/mikhail.pokhikhilov/proj/work_notes/scripts
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 export SFU_REPO=/Users/mikhail.pokhikhilov/proj/sfc
+export PATH=$PATH:~/.local/bin
