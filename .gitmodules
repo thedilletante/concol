@@ -102,3 +102,9 @@
 	path = vim/vim/pack/git-plugins/start/nerdtree
 	url = git@github.com:preservim/nerdtree.git
   ignore = dirty
+[submodule "vim/vim/pack/git-plugins/start/sonokai"]
+	path = vim/vim/pack/git-plugins/start/sonokai
+	url = https://github.com/sainnhe/sonokai
+[submodule "vim/vim/pack/git-plugins/start/vim-table-mode"]
+	path = vim/vim/pack/git-plugins/start/vim-table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode.git

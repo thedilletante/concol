@@ -137,6 +137,9 @@ set backspace=indent,eol,start
 " Highligh matched string
 set hlsearch
 
+" Enable incremental search
+set incsearch
+
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
@@ -193,7 +196,7 @@ nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 
 
 
-colorscheme afterglow
+colorscheme sonokai
 
 
 
@@ -213,11 +216,10 @@ autocmd Filetype * AnyFoldActivate               " activate for all filetypes
 
 set foldlevel=99 " Open all folds
 
-
-
-" Start NERDTree. If a file is specified, move the cursor to its window.
+" Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -225,3 +227,12 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 " Mirror the NERDTree before showing it. This makes it the same on all tabs.
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+nmap <F6> :NERDTreeToggle<CR>
+
+
+
+set rtp+=/usr/local/opt/fzf
+
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0

@@ -137,3 +137,30 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 export SFU_REPO=/Users/mikhail.pokhikhilov/proj/sfc
 export PATH=$PATH:~/.local/bin
+
+alias p=pushd
+alias o=popd
+
+alias week_number='python -c "import datetime; print(datetime.datetime.now().isocalendar()[1])"'
+
+eval "$(jira --completion-script-bash)"
+export RPROMPT="%t"
+
+
+
+# function git_baseline() {
+#   from=$0
+#   to=$(git rev-parse "${1}")
+#   while :
+#   do
+#     from=$(git rev-parse "${from}")
+#     merge_base=$(git merge-base "${from}" "${to}")
+#     if [ "${from}" == "${to}" ];
+#     then
+#       echo $from
+#       return
+#     fi
+#     from="^${from}"
+#   done
+# }
+export PATH=/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin:$PATH
