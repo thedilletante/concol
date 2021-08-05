@@ -3,7 +3,7 @@
 
 ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mikhail.pokhikhilov/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,8 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#source $HOME/.cargo/env
-#source /home/dilletante/proj/work_notes/config/zshrc
+source $HOME/.cargo/env
 source $HOME/proj/work_notes/config/zshrc
 
 alias ls=exa
@@ -132,10 +131,10 @@ autoload -U compinit
 compinit -i
 
 if [ "$TMUX" = "" ]; then tmux attach; fi
-export PATH=${PATH}:/Users/mikhail.pokhikhilov/proj/work_notes/scripts
+export PATH=${PATH}:~/proj/work_notes/scripts
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-export SFU_REPO=/Users/mikhail.pokhikhilov/proj/sfc
+export SFU_REPO=~/proj/sfu/sfc
 export PATH=$PATH:~/.local/bin
 
 alias p=pushd
@@ -143,7 +142,7 @@ alias o=popd
 
 alias week_number='python -c "import datetime; print(datetime.datetime.now().isocalendar()[1])"'
 
-eval "$(jira --completion-script-bash)"
+#eval "$(jira --completion-script-bash)"
 export RPROMPT="%t"
 
 
@@ -164,3 +163,9 @@ export RPROMPT="%t"
 #   done
 # }
 export PATH=/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/usr/lib/ccache:$PATH"

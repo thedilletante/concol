@@ -90,10 +90,6 @@
 	path = vim/vim/pack/git-plugins/start/vim-toml
 	url = git@github.com:cespare/vim-toml.git
   ignore = dirty
-[submodule "vim/vim/pack/git-plugins/start/himalaya"]
-	path = vim/vim/pack/git-plugins/start/himalaya
-	url = git@github.com:soywod/himalaya.git
-  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/nerdtree-git"]
 	path = vim/vim/pack/git-plugins/start/nerdtree-git
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git

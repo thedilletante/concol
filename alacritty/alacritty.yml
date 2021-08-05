@@ -123,7 +123,7 @@ font:
     #style: Italic
 
   # Point size
-  size: 12.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -335,6 +335,12 @@ live_config_reload: true
 #  program: /bin/bash
 #  args:
 #    - --login
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 
 # Startup directory
 #
@@ -496,7 +502,8 @@ key_bindings:
   #- { key: H,      mods: Command,         action: Hide             }
   - {key: Q, mods: Control, action: Quit}
   #- { key: W,      mods: Command,         action: Quit             }
-  - {key: F, mods: Command|Control, action: ToggleFullscreen}
+  #- {key: F, mods: Command|Control, action: ToggleFullscreen}
+  - {key: F11, action: ToggleFullscreen}
 
   - {key: Paste, action: Paste}
   - {key: Copy, action: Copy}
