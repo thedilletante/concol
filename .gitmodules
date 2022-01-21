@@ -104,3 +104,9 @@
 [submodule "vim/vim/pack/git-plugins/start/vim-table-mode"]
 	path = vim/vim/pack/git-plugins/start/vim-table-mode
 	url = git@github.com:dhruvasagar/vim-table-mode.git
+[submodule "vim/vim/pack/git-plugins/start/markdown-preview.nvim"]
+	path = vim/vim/pack/git-plugins/start/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git
+[submodule "vim/vim/pack/git-plugins/start/vim-rust-syntax-ext"]
+	path = vim/vim/pack/git-plugins/start/vim-rust-syntax-ext
+	url = git@github.com:arzg/vim-rust-syntax-ext.git
