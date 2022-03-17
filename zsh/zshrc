@@ -134,7 +134,7 @@ if [ "$TMUX" = "" ]; then tmux attach; fi
 export PATH=${PATH}:~/proj/work_notes/scripts
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-export SFU_REPO=~/proj/sfu/sfc
+export SFU_REPO=~/proj/sfc
 export PATH=$PATH:~/.local/bin
 
 alias p=pushd
@@ -169,3 +169,5 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/usr/lib/ccache:$PATH"
+
+source <(kubectl completion zsh)
