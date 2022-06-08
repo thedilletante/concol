@@ -537,12 +537,14 @@ key_bindings:
   - { key: Delete, chars: "\e[3~" }
   - { key: Left, mods: Shift, chars: "\e[1;2D" }
   - { key: Left, mods: Control, chars: "\e[1;5D" }
-  - { key: Left, mods: Alt, chars: "\e[1;3D" }
+  #- { key: Left, mods: Alt, chars: "\e[1;3D" }
+  - { key: Left,  mods: Alt, chars: "\x1BB" }
   - { key: Left, chars: "\e[D", mode: ~AppCursor }
   - { key: Left, chars: "\eOD", mode: AppCursor }
   - { key: Right, mods: Shift, chars: "\e[1;2C" }
   - { key: Right, mods: Control, chars: "\e[1;5C" }
-  - { key: Right, mods: Alt, chars: "\e[1;3C" }
+  #- { key: Right, mods: Alt, chars: "\e[1;3C" }
+  - { key: Right, mods: Alt, chars: "\x1BF" }
   - { key: Right, chars: "\e[C", mode: ~AppCursor }
   - { key: Right, chars: "\eOC", mode: AppCursor }
   - { key: Up, mods: Shift, chars: "\e[1;2A" }

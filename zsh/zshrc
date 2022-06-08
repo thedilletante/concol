@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+zstyle :omz:plugins:ssh-agent identities thedilletante_ed25519 work_gitlab_ed25519
 
 ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh installation.
@@ -71,7 +72,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	#archlinux
 	autopep8
 	battery
 	rust
@@ -79,6 +79,9 @@ plugins=(
 	emoji
 	fzf
   tmux
+  ssh-agent
+  nvm
+  brew
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -168,6 +171,7 @@ export PATH=/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/b
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/usr/lib/ccache:$PATH"
+export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 
 source <(kubectl completion zsh)
+
