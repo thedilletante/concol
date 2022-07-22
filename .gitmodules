@@ -110,3 +110,6 @@
 [submodule "vim/vim/pack/git-plugins/start/vim-rust-syntax-ext"]
 	path = vim/vim/pack/git-plugins/start/vim-rust-syntax-ext
 	url = git@github.com:arzg/vim-rust-syntax-ext.git
+[submodule "alacritty/alacritty-theme"]
+	path = alacritty/alacritty-theme
+	url = git@github.com:toggle-corp/alacritty-colorscheme.git
