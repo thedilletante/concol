@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-zstyle :omz:plugins:ssh-agent identities thedilletante_ed25519 work_gitlab_ed25519
+zstyle :omz:plugins:ssh-agent identities thedilletante_ed25519 work_ringcentral_gitlab_ed25519
 
 ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh installation.

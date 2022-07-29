@@ -199,6 +199,7 @@ let g:airline_theme='afterglow'
 let g:afterglow_inherit_background=1
 let g:afterglow_use_italics=0
 colorscheme afterglow
+"colorscheme shine
 
 
 
