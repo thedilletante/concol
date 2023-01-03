@@ -12,3 +12,5 @@
 	editor = vim
 [user]
 	name = Mikhail Pokhikhilov
+[cinnabar]
+	version-check = 1661868318

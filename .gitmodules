@@ -113,3 +113,6 @@
 [submodule "alacritty/alacritty-theme"]
 	path = alacritty/alacritty-theme
 	url = git@github.com:toggle-corp/alacritty-colorscheme.git
+[submodule "vim/vim/pack/git-plugins/start/vim-autopep8"]
+	path = vim/vim/pack/git-plugins/start/vim-autopep8
+	url = git@github.com:tell-k/vim-autopep8.git
