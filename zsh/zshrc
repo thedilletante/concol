@@ -111,11 +111,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/.cargo/env
-source $HOME/proj/work_notes/config/zshrc
 
 alias ls=exa
 alias grep=rg
+alias python=python3
 
 export PATH=$PATH:${HOME}/proj/tools/beauty_log:$HOME/proj/work_notes/scripts
 export PATH=/usr/local/bin:$PATH
@@ -125,10 +124,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #export HOSTCC="ccache gcc"
 #export HOSTCXX="ccache g++"
 export PATH=$PATH:/usr/local/go/bin
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 autoload -U compinit
 compinit -i
@@ -168,9 +163,12 @@ export PATH=/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/b
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.env_secrets ] && source ~/.env_secrets
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f ~/.cargo/env ] && source ~/.cargo/env
+[ -f ~/proj/work_notes/config/zshrc ] && source ~/proj/work_notes/config/zshrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
+[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && . "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 
 source <(kubectl completion zsh)
@@ -179,5 +177,5 @@ source <(kubectl completion zsh)
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/thedilletante/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-export PATH="/Users/thedilletante/Library/Python/3.10/bin:/Users/thedilletante/.rd/bin:/opt/homebrew/opt/ccache/libexec:/Users/thedilletante/.config/nvm/versions/node/v12.22.12/bin:/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/thedilletante/.cargo/bin:/Users/thedilletante/proj/tools/beauty_log:/Users/thedilletante/proj/work_notes/scripts:/usr/local/go/bin:/Users/thedilletante/.local/bin"
+export PATH="/Users/thedilletante/Library/Python/3.10/bin:/Users/thedilletante/.rd/bin:/opt/homebrew/opt/ccache/libexec:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/thedilletante/.cargo/bin:/Users/thedilletante/proj/tools/beauty_log:/Users/thedilletante/proj/work_notes/scripts:/usr/local/go/bin:/Users/thedilletante/.local/bin"
 JIRA_AUTH_TYPE=bearer
