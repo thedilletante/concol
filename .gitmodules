@@ -116,3 +116,6 @@
 [submodule "vim/vim/pack/git-plugins/start/vim-autopep8"]
 	path = vim/vim/pack/git-plugins/start/vim-autopep8
 	url = git@github.com:tell-k/vim-autopep8.git
+[submodule "vim/vim/pack/git-plugins/start/spelunker.vim"]
+	path = vim/vim/pack/git-plugins/start/spelunker.vim
+	url = git@github.com:KSR-Yasuda/spelunker.vim.git
