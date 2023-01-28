@@ -1,0 +1,9 @@
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile /Users/thedilletante/.ssh/thedilletante_ed25519
+
+Host ringcentral.com
+  HostName ringcentral.com
+  User git
+  IdentityFile /Users/thedilletante/.ssh/work_ringcentral_gitlab_ed25519

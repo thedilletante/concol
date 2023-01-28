@@ -6,7 +6,7 @@ xrdb -merge .Xresources
 feh --bg-scale ${HOME}/background.jpg &
 
 # set up transparency
-compton &
+xcompmgr &
 
 # start up screensaver service
 xscreensaver-command -exit
@@ -16,4 +16,4 @@ xscreensaver -no-splash &
 udiskie &
 
 # run xmonad
-xmonad
+i3
