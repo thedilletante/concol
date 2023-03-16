@@ -11,7 +11,6 @@ plugins=(
 	rust
 	colored-man-pages
 	fzf
-  tmux
   ssh-agent
   brew
   archlinux
@@ -30,7 +29,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-if [ "$TMUX" = "" ]; then tmux attach || tmux; fi
+#if [ "$TMUX" = "" ]; then tmux attach || tmux; fi
 
 export SFU_REPO=~/proj/sfc
 
@@ -47,7 +46,7 @@ export RPROMPT="%t"
 [ -f ~/proj/work_notes/config/zshrc ] && source ~/proj/work_notes/config/zshrc
 export NVM_DIR="$HOME/.nvm"
 if type brew &>/dev/null; then
-  [ -s "$(brew --prefix nvm)/nvm.sh" ] && source "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
+  [ -s "$(brew --prefix asdf)/libexec/asdf.sh" ] && source "$(brew --prefix asdf)/libexec/asdf.sh"
   [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && . "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
@@ -69,4 +68,8 @@ if [[ `uname` != "Darwin" ]]; then
   if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   	exec startx
 	fi
+else
+  alias go_x86_64="arch -x86_64 /bin/zsh"
+  export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 fi
+

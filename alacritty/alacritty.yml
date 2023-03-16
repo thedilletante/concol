@@ -325,10 +325,10 @@ live_config_reload: true
 #    - --login
 shell:
   program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - tmux attach || tmux
+  #args:
+    #- -l
+    #- -c
+    #- tmux attach || tmux
 
 # Startup directory
 #
