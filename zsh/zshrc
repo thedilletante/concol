@@ -21,6 +21,9 @@ source $ZSH/oh-my-zsh.sh
 alias ls=exa
 alias grep=rg
 alias python=python3
+if [[ `uname` != "Darwin" ]]; then
+  alias open=xdg-open
+fi
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -57,6 +60,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH=$PATH:~/.local/bin
+[ -d ~/.cargo/bin ] && export PATH=$PATH:~/.cargo/bin
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/thedilletante/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
@@ -66,7 +70,7 @@ export PATH="/usr/lib/ccache/bin:$PATH"
 
 if [[ `uname` != "Darwin" ]]; then
   if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  	exec startx
+    #exec startx
 	fi
 else
   alias go_x86_64="arch -x86_64 /bin/zsh"
