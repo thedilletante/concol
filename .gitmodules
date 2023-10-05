@@ -118,3 +118,15 @@
 [submodule "vim/vim/pack/git-plugins/start/Jenkinsfile-vim-syntax"]
 	path = vim/vim/pack/git-plugins/start/Jenkinsfile-vim-syntax
 	url = git@github.com:martinda/Jenkinsfile-vim-syntax.git
+[submodule "vim/vim/pack/git-plugins/start/copilot.vim"]
+	path = vim/vim/pack/git-plugins/start/copilot.vim
+	url = git@github.com:github/copilot.vim.git
+[submodule "vim/vim/pack/git-plugins/start/diffurcate.vim"]
+	path = vim/vim/pack/git-plugins/start/diffurcate.vim
+	url = git@github.com:AndrewRadev/diffurcate.vim.git
+[submodule "vim/vim/pack/git-plugins/start/fugitive-gitlab.vim.git"]
+	path = vim/vim/pack/git-plugins/start/fugitive-gitlab.vim.git
+	url = git@github.com:shumphrey/fugitive-gitlab.vim.git
+[submodule "vim/vim/pack/git-plugins/start/vim-sort-include"]
+	path = vim/vim/pack/git-plugins/start/vim-sort-include
+	url = git@github.com:agatan/vim-sort-include.git
