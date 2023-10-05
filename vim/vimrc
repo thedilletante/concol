@@ -246,3 +246,22 @@ let g:ycm_enable_diagnostic_highlighting = 0
 
 autocmd FileType python set equalprg=autopep8\ -
 
+let g:copilot_filetypes = {
+      \  '*': v:true
+      \}
+
+imap <silent><script><expr> <C-Y> copilot#Accept("\<CR>")
+imap <silent><script><expr> <C-C> copilot#Suggest()
+imap <silent><script><expr> <C-L> copilot#Next()
+imap <silent><script><expr> <C-H> copilot#Previous()
+let g:copilot_no_tab_map = v:true
+
+" Function to source only if file exists {
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+" }
+
+call SourceIfExists("~/.work.vimrc")

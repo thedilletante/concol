@@ -75,5 +75,7 @@ if [[ `uname` != "Darwin" ]]; then
 else
   alias go_x86_64="arch -x86_64 /bin/zsh"
   export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+  export PATH="${PATH}:$(brew --prefix llvm)/bin"
 fi
 
+export FZF_DEFAULT_COMMAND='rg --files'

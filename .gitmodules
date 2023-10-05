@@ -70,10 +70,6 @@
 	path = vim/vim/pack/git-plugins/start/plantuml-previewer.vim
 	url = git@github.com:weirongxu/plantuml-previewer.vim.git
   ignore = dirty
-[submodule "vim/vim/pack/git-plugins/start/ale"]
-	path = vim/vim/pack/git-plugins/start/ale
-	url = git@github.com:dense-analysis/ale.git
-  ignore = dirty
 [submodule "vim/vim/pack/git-plugins/start/indentLine"]
 	path = vim/vim/pack/git-plugins/start/indentLine
 	url = git@github.com:Yggdroot/indentLine.git

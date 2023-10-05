@@ -14,3 +14,10 @@
 	name = Mikhail Pokhikhilov
 [cinnabar]
 	version-check = 1661868318
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[difftool "diffpdf"]
+  cmd = diff-pdf --view \"$LOCAL\" \"$REMOTE\"
