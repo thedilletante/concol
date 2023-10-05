@@ -130,3 +130,4 @@
 [submodule "vim/vim/pack/git-plugins/start/vim-sort-include"]
 	path = vim/vim/pack/git-plugins/start/vim-sort-include
 	url = git@github.com:agatan/vim-sort-include.git
+  ignore = dirty
