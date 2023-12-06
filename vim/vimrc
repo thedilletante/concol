@@ -246,15 +246,13 @@ let g:ycm_enable_diagnostic_highlighting = 0
 
 autocmd FileType python set equalprg=autopep8\ -
 
-let g:copilot_filetypes = {
-      \  '*': v:true
-      \}
+let g:copilot_filetypes = {'*': v:true}
+let g:copilot_node_command = "~/.asdf/installs/nodejs/18.18.2/bin/node"
 
-imap <silent><script><expr> <C-Y> copilot#Accept("\<CR>")
+imap <silent><script><expr> <C-O> copilot#Accept("\<CR>")
 imap <silent><script><expr> <C-C> copilot#Suggest()
 imap <silent><script><expr> <C-L> copilot#Next()
 imap <silent><script><expr> <C-H> copilot#Previous()
-let g:copilot_no_tab_map = v:true
 
 " Function to source only if file exists {
 function! SourceIfExists(file)
@@ -265,3 +263,7 @@ endfunction
 " }
 
 call SourceIfExists("~/.work.vimrc")
+
+let g:mkdp_preview_options = {
+    \ 'uml': { 'server': 'http://localhost:8080',  'imageFormat': 'svg' }
+    \ }

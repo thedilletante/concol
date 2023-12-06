@@ -131,3 +131,7 @@
 	path = vim/vim/pack/git-plugins/start/vim-sort-include
 	url = git@github.com:agatan/vim-sort-include.git
   ignore = dirty
+[submodule "vim/vim/pack/git-plugins/start/vim-clang-format"]
+	path = vim/vim/pack/git-plugins/start/vim-clang-format
+	url = git@github.com:rhysd/vim-clang-format.git
+  ignore = dirty
