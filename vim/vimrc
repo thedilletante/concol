@@ -267,3 +267,6 @@ call SourceIfExists("~/.work.vimrc")
 let g:mkdp_preview_options = {
     \ 'uml': { 'server': 'http://localhost:8080',  'imageFormat': 'svg' }
     \ }
+
+" Key bindings can be changed, see below
+call wilder#setup({'modes': [':', '/', '?']})

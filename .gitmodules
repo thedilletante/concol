@@ -135,3 +135,6 @@
 	path = vim/vim/pack/git-plugins/start/vim-clang-format
 	url = git@github.com:rhysd/vim-clang-format.git
   ignore = dirty
+[submodule "vim/vim/pack/git-plugins/start/wilder.nvim"]
+	path = vim/vim/pack/git-plugins/start/wilder.nvim
+	url = git@github.com:gelguy/wilder.nvim.git
