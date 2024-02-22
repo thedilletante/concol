@@ -138,3 +138,6 @@
 [submodule "vim/vim/pack/git-plugins/start/wilder.nvim"]
 	path = vim/vim/pack/git-plugins/start/wilder.nvim
 	url = git@github.com:gelguy/wilder.nvim.git
+[submodule "alacritty/themes"]
+	path = alacritty/themes
+	url = git@github.com:alacritty/alacritty-theme.git
