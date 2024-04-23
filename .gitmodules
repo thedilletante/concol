@@ -141,3 +141,12 @@
 [submodule "alacritty/themes"]
 	path = alacritty/themes
 	url = git@github.com:alacritty/alacritty-theme.git
+[submodule "vim/vim/pack/themes/start/dracula"]
+	path = vim/vim/pack/themes/start/dracula
+	url = git@github.com:dracula/vim.git
+[submodule "vim/vim/pack/themes/start/gruvbox"]
+	path = vim/vim/pack/themes/start/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule "vim/vim/pack/themes/start/gruvbox-material"]
+	path = vim/vim/pack/themes/start/gruvbox-material
+	url = git@github.com:sainnhe/gruvbox-material.git

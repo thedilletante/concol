@@ -195,11 +195,23 @@ nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 
 
 
-"let g:airline_theme='afterglow'
-"let g:afterglow_inherit_background=1
-"let g:afterglow_use_italics=0
+let g:airline_theme='afterglow'
+let g:afterglow_inherit_background=1
+let g:afterglow_use_italics=0
+"colorscheme gruvbox
+"colorscheme dracula
+"colorscheme sonokai
 "colorscheme afterglow
 "colorscheme shine
+set background=dark
+
+" setup gruvbox-material theme
+if has('termguicolors')
+  set termguicolors
+endif
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
 
 
 set nospell
