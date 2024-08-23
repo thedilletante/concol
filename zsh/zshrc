@@ -19,7 +19,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias ls=exa
+alias ls=lsd
 alias grep=rg
 alias python=python3
 if [[ `uname` != "Darwin" ]]; then
@@ -87,3 +87,4 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 SAVEHIST=999999999
 HISTSIZE=${SAVEHIST}
 
+eval "$(gh copilot alias -- zsh)"
