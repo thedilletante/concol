@@ -55,8 +55,6 @@ if type brew &>/dev/null; then
   [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && . "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
-source <(kubectl completion zsh)
-
 export PATH=$PATH:${HOME}/proj/tools/beauty_log:$HOME/proj/work_notes/scripts
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
@@ -68,6 +66,8 @@ export PATH="/Users/thedilletante/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 [ -f "$HOME/.asdf/asdf.sh" ] && source "$HOME/.asdf/asdf.sh"
 export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/lib/ccache/bin:$PATH"
 
 if [[ `uname` != "Darwin" ]]; then
@@ -87,4 +87,12 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 SAVEHIST=999999999
 HISTSIZE=${SAVEHIST}
 
-eval "$(gh copilot alias -- zsh)"
+if type brew &>/dev/null; then
+  source <(kubectl completion zsh)
+fi
+
+if type gh &>/dev/null; then
+  eval "$(gh copilot alias -- zsh)"
+fi
+
+export PATH=$PATH:/nix/var/nix/profiles/default/bin/
