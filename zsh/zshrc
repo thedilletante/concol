@@ -96,3 +96,6 @@ if type gh &>/dev/null; then
 fi
 
 export PATH=$PATH:/nix/var/nix/profiles/default/bin/
+
+alias fzf_branch='gb | fzf | xargs | sed "s/\* *//"'
+alias fzf_branch_all='gba | fzf | xargs | sed "s/\* *//" | sed "s|remotes/||"'

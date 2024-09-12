@@ -282,3 +282,6 @@ let g:mkdp_preview_options = {
 
 " Key bindings can be changed, see below
 call wilder#setup({'modes': [':', '/', '?']})
+
+" Use jj in insert mode to escape
+imap jj <Esc>
