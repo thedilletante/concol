@@ -98,4 +98,12 @@ fi
 export PATH=$PATH:/nix/var/nix/profiles/default/bin/
 
 alias fzf_branch='gb | fzf | xargs | sed "s/\* *//"'
+alias fzf_branch_multi='gb | fzf -m | xargs | sed "s/\* *//"'
 alias fzf_branch_all='gba | fzf | xargs | sed "s/\* *//" | sed "s|remotes/||"'
+alias fzf_branch_all_multi='gba | fzf  -m| xargs | sed "s/\* *//" | sed "s|remotes/||"'
+
+export EMOJI_CLI_USE_EMOJI=1
+EMOJI_CLI_PATH=~/.zsh_plugins/emoji-cli/emoji-cli.zsh
+if [ -f "${EMOJI_CLI_PATH}" ]; then
+  source "${EMOJI_CLI_PATH}"
+fi
