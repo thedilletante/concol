@@ -3,6 +3,11 @@ Host github.com
   User git
   IdentityFile /Users/thedilletante/.ssh/thedilletante_ed25519
 
+Host freedesktop.org
+  HostName freedesktop.org
+  User git
+  IdentityFile /Users/thedilletante/.ssh/thedilletante_ed25519
+
 Host ringcentral.com
   HostName ringcentral.com
   User git
